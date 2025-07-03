@@ -2,7 +2,6 @@ package dao;
 
 import entity.Customers;
 import lombok.Getter;
-import start.Dao;
 import utils.ConnectionManager;
 
 import java.sql.ResultSet;
