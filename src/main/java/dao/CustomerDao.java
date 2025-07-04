@@ -14,21 +14,21 @@ public class CustomerDao implements Dao<Integer,Customers> {
     @Getter
     private static final CustomerDao instance = new CustomerDao();
 
-    private static final String SQLSAVE = """
+    private static final String SQL_SAVE = """
             insert into customers (first_name, last_name, email) 
             values (?,?,?)
             """;
-    private static final String SQLDELETE = """
+    private static final String SQL_DELETE = """
             DELETE FROM customers
             Where customer_id = ?
             """;
-    private static final String SQLUPDATE = """
+    private static final String SQL_UPDATE = """
             UPDATE customers
             SET first_name = ?, last_name = ?, email = ?
             Where customer_id = ?
             """;
 
-    private static final String SQLSELECTALL = """
+    private static final String SQL_SELECT_ALL = """
             Select * from customers
             """;
     private static final String SQL_FIND_BY_ID = """
